@@ -17,9 +17,6 @@ package tachyon.network.protocol;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -34,8 +31,7 @@ import tachyon.Constants;
  */
 @ChannelHandler.Sharable
 public class RPCMessageDecoder extends MessageToMessageDecoder<ByteBuf> {
-  private static final Logger LOG = LoggerFactory.getLogger(Constants.LOGGER_TYPE);
-
+  
   @Override
   public void decode(ChannelHandlerContext ctx,
                      ByteBuf in,
